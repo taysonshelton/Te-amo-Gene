@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Te Amo 💙</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00bfff;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .matrix {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      overflow: hidden;
+      padding-top: 50px;
+      z-index: 1;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      animation: scroll 30s linear infinite;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 20px;
+      white-space: nowrap;
+      opacity: 0.8;
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+
+    @keyframes flicker {
+      from { opacity: 1; }
+      to { opacity: 0.3; }
+    }
+
+    .rain-cow {
+      position: absolute;
+      top: -10%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    
+    @keyframes bounceCow0 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow1 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow2 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow3 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow4 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow5 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow6 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow7 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow8 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow9 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow10 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    @keyframes bounceCow11 {
+      0%   { top: -10%; transform: scale(1); }
+      80%  { top: 90%; transform: scale(1); }
+      85%  { top: 93%; transform: scaleY(0.7); }
+      90%  { top: 87%; transform: scaleY(1.2); }
+      100% { top: 90%; transform: scale(1); }
+    }
+    
+    
+    .rain-cow:nth-of-type(1) {
+      left: 5%;
+      animation: bounceCow0 6s ease-in-out 0.0s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(2) {
+      left: 12%;
+      animation: bounceCow1 6s ease-in-out 0.6s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(3) {
+      left: 19%;
+      animation: bounceCow2 6s ease-in-out 1.2s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(4) {
+      left: 26%;
+      animation: bounceCow3 6s ease-in-out 1.7999999999999998s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(5) {
+      left: 33%;
+      animation: bounceCow4 6s ease-in-out 2.4s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(6) {
+      left: 40%;
+      animation: bounceCow5 6s ease-in-out 3.0s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(7) {
+      left: 47%;
+      animation: bounceCow6 6s ease-in-out 3.5999999999999996s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(8) {
+      left: 54%;
+      animation: bounceCow7 6s ease-in-out 4.2s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(9) {
+      left: 61%;
+      animation: bounceCow8 6s ease-in-out 4.8s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(10) {
+      left: 68%;
+      animation: bounceCow9 6s ease-in-out 5.3999999999999995s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(11) {
+      left: 75%;
+      animation: bounceCow10 6s ease-in-out 6.0s infinite;
+      font-size: 40px;
+    }
+    
+    .rain-cow:nth-of-type(12) {
+      left: 82%;
+      animation: bounceCow11 6s ease-in-out 6.6s infinite;
+      font-size: 40px;
+    }
+    
+
+    .hearts-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      top: -10%;
+      font-size: 24px;
+      animation: floatHeart 12s linear infinite;
+      color: #00bfff;
+      opacity: 0.3;
+    }
+
+    .heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 15%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 25%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 35%; animation-delay: 3s; }
+.heart:nth-child(5) { left: 45%; animation-delay: 4s; }
+.heart:nth-child(6) { left: 55%; animation-delay: 5s; }
+.heart:nth-child(7) { left: 65%; animation-delay: 6s; }
+.heart:nth-child(8) { left: 75%; animation-delay: 7s; }
+.heart:nth-child(9) { left: 85%; animation-delay: 8s; }
+.heart:nth-child(10) { left: 95%; animation-delay: 9s; }
+
+    @keyframes floatHeart {
+      0%   { top: 100%; opacity: 0; }
+      10%  { opacity: 0.2; }
+      50%  { opacity: 0.4; }
+      90%  { opacity: 0.2; }
+      100% { top: -10%; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts-background">
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  <div class="heart">💙</div>
+  </div>
+
+  <div class="matrix">
+    <div class="column">
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+    </div>
+    <div class="column">
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+      <div class="text">Te amo Genesis Manrique mushoo 💙</div>
+    </div>
+  </div>
+
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+  <div class="rain-cow">🐮</div>
+
+
+</body>
+</html>
